@@ -12,7 +12,9 @@
     <div class="nav-container">
       <div class="left-navbar">
         <ul>
-          <li><a href="#"><img src="../../Images/hamburger.png" alt=""></a></li>
+          <a href="#" id="openButton" onclick="open(); return false;">
+            <img src="../../Images/hamburger.png" alt="">
+          </a>
         </ul>
       </div>
       <div class="logo">
@@ -51,9 +53,31 @@
           </ul>
         </div>
         <div class="button-container">
-          <button id="signin">Sign in </button>
-          <button id="create">create account </button>
+          <button id="signin"><a href="#" style="color: white;">sign in </a></button>
+          <button id="create"><a href="#">create account </a></button>
         </div>
+      </div>
+    </div>
+    <div class="side-bar" id="here">
+      <div class="side-container">
+        <ul>
+          <li><a href="#">shop </a></li>
+          <li><a href="#">ss25 lookbook </a></li>
+          <li><a href="#">news </a></li>
+          <li><a href="#">about </a></li>
+          <li><a href="#">stores</a></li>
+          <li><a href="#">cafe</a></li>
+          <li><a href="#">art</a></li>
+          <li><a href="#">sonny</a></li>
+          <li><a href="#">sound</a></li>
+        </ul>
+      </div>
+      <div class="close-button">
+        <ul>
+          <li>
+            <a href="#" id="close" onclick="close(); return false;">&times;</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

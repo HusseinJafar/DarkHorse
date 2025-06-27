@@ -51,6 +51,7 @@
 .right-navbar img{
     cursor: pointer;
     height: 20px;
+    vertical-align: middle;
 }
 .logo img{
     cursor: pointer;
@@ -114,7 +115,8 @@
     letter-spacing: 0.6px;
 }
 .forgot-password{
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     width: 100%;
     height: 25px;
     text-align: center;
@@ -134,9 +136,13 @@
     width: 100%;
     height: 300px;
 }
+.button-container a{
+    text-decoration: none;
+    color: black;
+}
 .button-container button{
     display: block;
-    margin-bottom: 35px;
+    margin-bottom: 55px;
     width: 100%;
     height: 55px;
     padding: 20px;
@@ -163,4 +169,54 @@
 #create:hover{
     background-color: black;
     color: white;
+}
+.side-bar{
+    width: 400px;
+    height: 100vh;
+    top:0;
+    left:0;
+    position: fixed;
+    background-color:#5D5D5D;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.3s ease,opacity 0.3s ease;
+    pointer-events: none;
+}
+.side-bar.active{
+   width: 400px;
+   opacity: 1;
+}
+.side-container{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.side-container ul,.close-button ul{
+    list-style: none;
+}
+.side-container ul li{
+    display: block;
+    padding-bottom: 45px;
+}
+.side-container ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    color: white;
+    padding: 0px 10px;
+}
+.close-button{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.close-button a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    padding: 0;
+    cursor: pointer;
 }
