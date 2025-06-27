@@ -66,28 +66,29 @@
 }
 #side-bar.active{
     opacity: 1; 
-    pointer-events: none;
+    pointer-events: auto;
 }
-#side-container{
+.side-container{
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
-#side-container ul,.close-button ul{
+.side-container ul,.close-button ul{
     list-style: none;
 }
 .side-container ul li{
     display: block;
-    padding: 20px 0px;
+    padding: 16px 0px;
 }
-#side-container ul li a{
+.side-container ul li a{
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 22px;
     letter-spacing: 0.6px;
-    font-weight: 500;
+    cursor: pointer;
 }
+
 .close-button{
     margin-right: 30px;
     margin-top: 10px;
@@ -97,4 +98,111 @@
     color: white;
     font-size: 32px;
     cursor: pointer;
+}
+.form-container{
+    margin-top: 100px;
+    width: 550px;
+    height: 450px;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-60%);
+}
+.form-header{
+    margin-top: 10px;
+    width: 100%;
+    height: 25px;
+}
+.form-header p{
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.7px;
+}
+.form-body{
+    margin-top: 10px;
+    width: 85%;
+    height: 400px;
+}
+.form-wrapper{
+    position: relative;
+}
+.form-body input{
+    width: 100%;
+    padding: 14px 12px;
+    border: none;
+    border-bottom: 0.1px solid black;
+    background-color: white;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.form-body label{
+    position: absolute;
+    left: -2px;
+    top: 18px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    transition: all 0.3s ease;
+}
+.form-body input:focus + label,
+.form-body input:not(:placeholder-shown) + label{
+    top: -10px;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+}
+.forgot-password{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+}
+.forgot-password ul{
+    list-style: none;
+}
+.forgot-password ul li a{
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+}
+.button-container{
+    width: 100%;
+}
+.button-container button{
+    display: block;
+    margin-bottom: 40px;
+}
+#signin{
+    width: 100%;
+    padding: 18px 12px;
+    border: 0.1px solid black;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+}
+#create{
+    width: 100%;
+    padding: 18px 12px;
+    background-color: transparent;
+    border: 0.1px solid black;
+    transition: all 0.5s ease-in-out;
+}
+#create:hover{
+    background-color: black;
+    color: white;
+}
+#create a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+}
+#create:hover a{
+    color: white;
 }
