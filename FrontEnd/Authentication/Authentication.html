@@ -1,122 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="" />
-    <link rel="stylesheet" href="Authentication.css" />
-    <title></title>
-  </head>
-  <body>
-    <div class="banner">
-      <div class="nav-container">
-        <div class="left-navbar">
-          <ul>
-            <li>
-              <a href=""><img src="../../Images/hamburger.png" alt="" /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="logo">
-          <ul>
-            <li>
-              <a href="../HomePage/HomePage.html"><p>AIMÉ LEON DORE</p></a>
-            </li>
-          </ul>
-        </div>
-        <div class="right-navbar">
-          <ul>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../Images/b1ff59a3-2c31-42e9-a3f6-e302e180ce27.SVG"
-                  alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../Images/6663bc00-0040-43f0-8b1c-9163eef5bc90.SVG"
-                  alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img
-                  src="../../Images/7476c2ef-031c-48d2-bf87-947c4387d4f3.SVG"
-                  alt=""
-              /></a>
-            </li>
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../Images/favicon-32x32.png">
+  <link rel="stylesheet" href="Authentication.css">
+  <title>Account-Aime leon Dore</title>
+</head>
+<body>
+  <div class="banner">
+    <div class="nav-container">
+      <div class="left-navbar">
+        <ul>
+          <li><a href="#"><img src="../../Images/hamburger.png" alt=""></a></li>
+        </ul>
       </div>
-      <div class="form-container">
-        <div class="form">
-          <div class="form-header">
-            <p>my account</p>
-          </div>
-          <div class="form-body">
-            <form action="#" autocomplete="off">
-              <div class="floating-input-group">
-                <input type="text" id="email" name="email" placeholder=" " />
-                <label for="email" class="form-label">EMAIL</label>
-              </div>
-              <div class="floating-input-group">
-                <input type="password" id="password" name="password" placeholder=" " />
-                <label for="password" class="form-label">PASSWORD</label>
-              </div>
-              <div class="forgot-password">
-                <ul>
-                  <li><a href="#">forgot password? </a></li>
-                </ul>
-              </div>
-              <button id="signin">sign in</button>
-              <button id="create-account">create account</button>
-            </form>
-          </div>
-        </div>
+      <div class="logo">
+        <ul>
+          <li><a href="#"><img src="../../Images/logo.SVG" alt=""></a></li>
+        </ul>
       </div>
-      
-      <!-- Additional CSS for floating labels -->
-      <style>
-        .floating-input-group {
-          position: relative;
-          margin-bottom: 20px;
-        }
-      
-        /* Style the input fields */
-        .floating-input-group input {
-          width: 100%;
-          padding: 12px 12px;
-          font-size: 16px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          outline: none;
-        }
-      
-        /* Style the labels */
-        .form-label {
-          position: absolute;
-          top: 50%;
-          left: 12px;
-          transform: translateY(-50%);
-          background: #fff;
-          padding: 0 4px;
-          color: #777;
-          transition: all 0.2s ease-in-out;
-          pointer-events: none;
-          font-size: 14px;
-        }
-      
-        /* Float the label when input is focused or has value */
-        .floating-input-group input:focus + .form-label,
-        .floating-input-group input:not(:placeholder-shown) + .form-label {
-          top: -8px;
-          font-size: 12px;
-          color: #333;
-        }
-      </style>
+      <div class="right-navbar">
+        <ul>
+          <li><a href="#"><img src="../../Images/Search.SVG" alt=""></a></li>
+          <li><a href="#"><img src="../../Images/Account.SVG" alt=""></a></li>
+          <li><a href="#"><img src="../../Images/Bag.SVG" alt=""></a></li>
+        </ul>
+      </div>
     </div>
-    <script src="Authentication.js"></script>
-  </body>
+    <div class="form-container">
+      <div class="header">
+        <p>my account</p>
+      </div>
+      <div class="form-body">
+
+        <form action="#" autocomplete="off">
+          <div class="section-wrapper">
+            <input type="text" id="email" name="email" placeholder="">
+            <label for="email">email</label>
+          </div>
+          <div class="section-wrapper">
+            <input type="password" id="password"
+            name="password" placeholder="">
+            <label for="password">password</label>
+          </div>
+        </form>
+        <div class="forgot-password">
+          <ul>
+            <li><a href="#">Forgot password?</a></li>
+          </ul>
+        </div>
+        <div class="button-container">
+          <button id="signin">Sign in </button>
+          <button id="create">create account </button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script src="Authentication.js"></script> 
+</body>
 </html>
