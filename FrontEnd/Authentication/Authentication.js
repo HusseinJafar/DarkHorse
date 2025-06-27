@@ -1,21 +1,10 @@
-const openBtn=document.getElementById("openButton");
+const hamburgerButton=document.getElementById("hamburger");
 
-const closeBtn=document.getElementById("close");
+const sideBar=document.getElementById("side-bar");
 
-const sideBar=document.getElementById("here");
+function openSideBar(){
 
-closeBtn.addEventListener("click",close);
+    sideBar.classList.add("active");
+};
 
-openBtn.addEventListener("click",open);
-
-function close(){
-
-    sideBar.classList.remove("active");
-
-  
-}
-
-document.getElementById("openButton").addEventListener("click", function(e) {
-    e.preventDefault(); // prevents navigation
-    open();
-  });
+hamburgerButton.addEventListener("click",openSideBar);
