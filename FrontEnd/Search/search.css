@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    min-height: 100vh;
+}
+.nav-container{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+.left-navbar{
+    margin-left: 30px;
+}
+.right-navbar{
+    margin-right: 30px;
+}
+.left-navbar ul, .logo ul, .right-navbar ul{
+    list-style: none;
+}
+.left-navbar img{
+    height: 25px;
+    vertical-align: middle;
+}
+.logo img{
+    height: 35px;
+    vertical-align: middle;
+}
+.right-navbar img{
+    vertical-align: middle;
+}
+.right-navbar li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+#side-bar{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+}
+#side-bar.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.side-container{
+    margin-top: 35px;
+    margin-left: 20px;
+}
+.close-button{
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.side-container ul{
+    list-style: none;
+}
+.side-container ul li{
+    padding: 17px 0px;
+}
+.side-container ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    color: white;
+}
+.close-button ul{
+    list-style: none;
+}
+.close-button ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.look-book{
+    position:fixed;
+    width: 80%;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: 200px;
+}
+.lookbook-header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.place-holder{
+    width: 90%;
+}
+.place-holder input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 0.1px solid black;
+    outline: none;
+    font-size: 13px;
+    line-height: 22px;
+}
+.place-holder input::placeholder{
+    margin-top: 30px; 
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 22px;
+}
+.search-close{
+    margin-right: 20px;
+}
+.search-close ul{
+    list-style: none;
+}
+.search-close ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+.form-body{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.left{
+    width: 15%;
+    height: 100%;
+}
+.left ul{
+    list-style: none;
+}
+.left ul li{
+    display: block;
+    padding: 15px 0px;
+}
+.left ul li a{
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    color: black;
+}
+.lookbook-images{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.image1{
+    width: 50%;
+    height: 100%;
+    margin-right: 5px;
+}
+.image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    cursor: pointer;
+}
+.image2{
+    width: 50%;
+    height: 100%;
+}
+.image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
