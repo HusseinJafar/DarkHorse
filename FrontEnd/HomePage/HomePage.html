@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Interactive Page</title>
-    <link rel="stylesheet" href="HomePage.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elegant Interactive Page</title>
+<link rel="stylesheet" href="HomePage.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Web Page</h1>
-        <p>This is a simple example with HTML, CSS, and JavaScript.</p>
-    </header>
+<header>
+    <h1>Welcome to My Stylish Web Page</h1>
+    <p>HTML, CSS, and JavaScript in harmony for a sleek experience.</p>
+</header>
 
-    <section class="content">
-        <div class="card" id="card1">
-            <h2>Card One</h2>
-            <p>This is the first card. Click the button below to change my background color.</p>
-            <button onclick="changeColor('card1')">Change Color</button>
-        </div>
+<main class="content">
+    <section class="cards-container">
+        <article class="card" id="card1" aria-label="Color changer card">
+            <h2>Colorful Card</h2>
+            <p>Click below to change my background to a random vibrant color.</p>
+            <button onclick="changeColor('card1')">Change Color 🌈</button>
+        </article>
 
-        <div class="card" id="card2">
-            <h2>Card Two</h2>
-            <p>This is the second card. Click the button below to toggle visibility.</p>
-            <button onclick="toggleVisibility('card2')">Toggle Visibility</button>
-        </div>
+        <article class="card" id="card2" aria-label="Toggle visibility card">
+            <h2>Hide & Show Card</h2>
+            <p>Click below to toggle my visibility with a smooth animation.</p>
+            <button onclick="toggleVisibility('card2')">Toggle Visibility ✨</button>
+        </article>
 
-        <div class="card" id="card3">
-            <h2>Card Three</h2>
-            <p>This is the third card. Click the button below to display an alert.</p>
-            <button onclick="showAlert()">Show Alert</button>
-        </div>
+        <article class="card" id="card3" aria-label="Alert button card">
+            <h2>Alert Card</h2>
+            <p>Click below to get a friendly alert message from JavaScript.</p>
+            <button onclick="showAlert()">Say Hello 👋</button>
+        </article>
     </section>
+</main>
 
-    <footer>
-        <p>&copy; 2025 Jafar. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Jafar. All rights reserved.</p>
+</footer>
 
-    <script src="HomePage.js"></script>
+<script src="HomePage.js"></script>
 </body>
 </html>
