@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Interactive Page</title>
+    <link rel="stylesheet" href="HomePage.css" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+        <p>This is a simple example with HTML, CSS, and JavaScript.</p>
+    </header>
+
+    <section class="content">
+        <div class="card" id="card1">
+            <h2>Card One</h2>
+            <p>This is the first card. Click the button below to change my background color.</p>
+            <button onclick="changeColor('card1')">Change Color</button>
+        </div>
+
+        <div class="card" id="card2">
+            <h2>Card Two</h2>
+            <p>This is the second card. Click the button below to toggle visibility.</p>
+            <button onclick="toggleVisibility('card2')">Toggle Visibility</button>
+        </div>
+
+        <div class="card" id="card3">
+            <h2>Card Three</h2>
+            <p>This is the third card. Click the button below to display an alert.</p>
+            <button onclick="showAlert()">Show Alert</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jafar. All rights reserved.</p>
+    </footer>
+
+    <script src="HomePage.js"></script>
+</body>
+</html>
