@@ -157,7 +157,7 @@
     line-height: 22px;
     letter-spacing: 0.6px;
 }
-/* .right-sidebar{
+.right-sidebar{
     position: absolute;
     right: 0;
     top: 0;
@@ -166,7 +166,7 @@
     height: 100vh;
     background-color: red;
     z-index: 900;
-} */
+}
 .product-grid{
     margin-top: 113px;
     position: relative;
