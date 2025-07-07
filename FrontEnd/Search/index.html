@@ -1,0 +1,468 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8" />  
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+<title>Comprehensive Sample Website</title>  
+<style>  
+/* Basic Reset */  
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}  
+
+/* Body Styles */  
+body {  
+  font-family: Arial, sans-serif;  
+  line-height: 1.6;  
+  background-color: #f4f4f4;  
+  color: #333;  
+}  
+
+/* Container */  
+.container {  
+  width: 100%;  
+  max-width: 1200px;  
+  margin: auto;  
+  padding: 20px;  
+}  
+
+/* Header */  
+header {  
+  background-color: #333;  
+  color: #fff;  
+  padding: 20px 0;  
+}  
+
+header h1 {  
+  text-align: center;  
+  font-size: 2.5em;  
+  margin-bottom: 10px;  
+}  
+
+/* Navigation */  
+nav {  
+  display: flex;  
+  justify-content: center;  
+  background-color: #444;  
+}  
+
+nav ul {  
+  list-style: none;  
+  display: flex;  
+  gap: 20px;  
+}  
+
+nav ul li a {  
+  color: #fff;  
+  text-decoration: none;  
+  padding: 14px 20px;  
+  display: inline-block;  
+}  
+
+nav ul li a:hover {  
+  background-color: #555;  
+}  
+
+/* Main Content */  
+main {  
+  padding: 40px 20px;  
+}  
+
+/* Sections */  
+section {  
+  margin-bottom: 60px;  
+}  
+
+section h2 {  
+  font-size: 2em;  
+  margin-bottom: 20px;  
+  border-bottom: 2px solid #ccc;  
+  padding-bottom: 10px;  
+}  
+
+/* Gallery styles */  
+.gallery {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+  gap: 20px;  
+}  
+
+.gallery-item {  
+  background-color: #fff;  
+  padding: 10px;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);  
+  transition: transform 0.3s ease;  
+}  
+
+.gallery-item:hover {  
+  transform: scale(1.05);  
+}  
+
+/* Card styles */  
+.card {  
+  background-color: #fff;  
+  border-radius: 10px;  
+  padding: 20px;  
+  margin-bottom: 20px;  
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  
+}  
+
+/* Buttons */  
+button {  
+  background-color: #007bff;  
+  color: #fff;  
+  border: none;  
+  padding: 12px 24px;  
+  border-radius: 4px;  
+  cursor: pointer;  
+  font-size: 1em;  
+  transition: background-color 0.3s ease;  
+}  
+
+button:hover {  
+  background-color: #0056b3;  
+}  
+
+/* Forms */  
+form {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 15px;  
+}  
+
+input[type="text"],  
+input[type="email"],  
+input[type="password"],  
+select,  
+textarea {  
+  padding: 12px;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+  font-size: 1em;  
+  width: 100%;  
+}  
+
+input[type="text"]:focus,  
+input[type="email"]:focus,  
+input[type="password"]:focus,  
+select:focus,  
+textarea:focus {  
+  outline: none;  
+  border-color: #007bff;  
+}  
+
+/* Footer */  
+footer {  
+  background-color: #222;  
+  color: #fff;  
+  padding: 30px 20px;  
+  text-align: center;  
+}  
+
+/* Responsive Design */  
+@media(max-width: 768px) {  
+  nav {  
+    flex-direction: column;  
+  }  
+  nav ul {  
+    flex-direction: column;  
+  }  
+  header h1 {  
+    font-size: 2em;  
+  }  
+  main {  
+    padding: 20px 10px;  
+  }  
+}  
+
+/* Table Styles */  
+table {  
+  width: 100%;  
+  border-collapse: collapse;  
+  margin-bottom: 30px;  
+}  
+
+th, td {  
+  padding: 12px;  
+  border: 1px solid #ccc;  
+  text-align: left;  
+}  
+
+th {  
+  background-color: #f2f2f2;  
+}  
+
+tr:nth-child(even) {  
+  background-color: #fafafa;  
+}  
+
+/* Alerts */  
+.alert {  
+  padding: 15px;  
+  background-color: #f8d7da;  
+  color: #842029;  
+  border: 1px solid #f5c2c7;  
+  border-radius: 4px;  
+  margin-bottom: 20px;  
+}  
+
+/* Success message */  
+.alert-success {  
+  background-color: #d1e7dd;  
+  color: #0f5132;  
+}  
+
+/* Info message */  
+.alert-info {  
+  background-color: #cff4fc;  
+  color: #055160;  
+}  
+
+/* Warning message */  
+.alert-warning {  
+  background-color: #fff3cd;  
+  color: #664d03;  
+}  
+
+/* Utility classes */  
+.text-center {  
+  text-align: center;  
+}  
+
+.mt-20 {  
+  margin-top: 20px;  
+}  
+
+.mb-20 {  
+  margin-bottom: 20px;  
+}  
+
+.p-10 {  
+  padding: 10px;  
+}  
+
+.flex {  
+  display: flex;  
+}  
+
+.flex-column {  
+  flex-direction: column;  
+}  
+
+.set-width-100 {  
+  width: 100%;  
+}  
+
+/* Additional styles */  
+.highlight {  
+  background-color: yellow;  
+  padding: 5px 10px;  
+}  
+
+.shadow {  
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);  
+}  
+
+.border-rounded {  
+  border-radius: 8px;  
+}  
+
+/* Animation example */  
+@keyframes bounce {  
+  0%, 20%, 50%, 80%, 100% {  
+    transform: translateY(0);  
+  }  
+  40% {  
+    transform: translateY(-20px);  
+  }  
+  60% {  
+    transform: translateY(-10px);  
+  }  
+}  
+.bounce {  
+  animation: bounce 2s infinite;  
+}  
+
+/* Custom scrollbars for WebKit */  
+::-webkit-scrollbar {  
+  width: 8px;  
+}  
+
+::-webkit-scrollbar-track {  
+  background: #f1f1f1;  
+}  
+
+::-webkit-scrollbar-thumb {  
+  background-color: #888;  
+  border-radius: 4px;  
+}  
+
+::-webkit-scrollbar-thumb:hover {  
+  background-color: #555;  
+}  
+</style>  
+</head>  
+<body>  
+
+<header>  
+  <h1>My Sample Website</h1>  
+</header>  
+
+<nav>  
+  <ul>  
+    <li><a href="#home">Home</a></li>  
+    <li><a href="#about">About</a></li>  
+    <li><a href="#gallery">Gallery</a></li>  
+    <li><a href="#contact">Contact</a></li>  
+    <li><a href="#form">Form</a></li>  
+    <li><a href="#table">Table</a></li>  
+  </ul>  
+</nav>  
+
+<main>  
+  <!-- Hero Section -->  
+  <section id="home" class="section">  
+    <div class="container">  
+      <h2>Welcome to our website!</h2>  
+      <p>This is a comprehensive example of a large HTML document, including various sections, components, and styles.</p>  
+      <button class="btn-primary">Get Started</button>  
+    </div>  
+  </section>  
+
+  <!-- About Section -->  
+  <section id="about" class="section">  
+    <div class="container">  
+      <h2>About Us</h2>  
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae augue sed urna tincidunt consequat. Nulla facilisi. Praesent ut odio vitae tortor pulvinar porta.</p>  
+      <div class="cards">  
+        <div class="card">  
+          <h3>Our Mission</h3>  
+          <p>To provide quality services and solutions for our clients, with a commitment to excellence.</p>  
+        </div>  
+        <div class="card">  
+          <h3>Our Vision</h3>  
+          <p>Innovating and leading in our industry to create a better future for all.</p>  
+        </div>  
+        <div class="card">  
+          <h3>Our Values</h3>  
+          <p>Integrity, dedication, and customer satisfaction are at the core of everything we do.</p>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+
+  <!-- Gallery Section -->  
+  <section id="gallery" class="section">  
+    <div class="container">  
+      <h2>Gallery</h2>  
+      <div class="gallery">  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+        <div class="gallery-item"><img src="https://via.placeholder.com/300" alt="Placeholder" /></div>  
+      </div>  
+    </div>  
+  </section>  
+
+  <!-- Features Section -->  
+  <section id="features" class="section">  
+    <div class="container">  
+      <h2>Features</h2>  
+      <div class="grid">  
+        <div class="card shadow border-rounded">  
+          <h3>Feature 1</h3>  
+          <p>Discover the amazing benefits of our first feature. It helps you achieve your goals effectively.</p>  
+        </div>  
+        <div class="card shadow border-rounded">  
+          <h3>Feature 2</h3>  
+          <p>Our second feature provides seamless integration with your existing workflow.</p>  
+        </div>  
+        <div class="card shadow border-rounded">  
+          <h3>Feature 3</h3>  
+          <p>Enjoy easy customization and flexibility with our third feature.</p>  
+        </div>  
+        <div class="card shadow border-rounded">  
+          <h3>Feature 4</h3>  
+          <p>Our fourth feature offers robust security measures for your safety.</p>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+
+  <!-- Testimonials -->  
+  <section id="testimonials" class="section">  
+    <div class="container">  
+      <h2>What Our Clients Say</h2>  
+      <div class="grid">  
+        <div class="card">  
+          <p>"This service exceeded our expectations!"</p>  
+          <p>- Jane Doe</p>  
+        </div>  
+        <div class="card">  
+          <p>"Highly recommended for any business." </p>  
+          <p>- John Smith</p>  
+        </div>  
+        <div class="card">  
+          <p>"Exceptional quality and support."</p>  
+          <p>- Emily Johnson</p>  
+        </div>  
+      </div>  
+    </div>  
+  </section>  
+
+  <!-- Call to Action -->  
+  <section id="cta" class="section bg-primary" style="background-color:#007bff; color:#fff;">  
+    <div class="container text-center">  
+      <h2>Ready to start?</h2>  
+      <p>Contact us today for a free consultation!</p>  
+      <button class="btn-light">Contact Us</button>  
+    </div>  
+  </section>  
+
+  <!-- Contact Form -->  
+  <section id="contact" class="section">  
+    <div class="container">  
+      <h2>Contact Us</h2>  
+      <form>  
+        <input type="text" placeholder="Your Name" required />  
+        <input type="email" placeholder="Your Email" required />  
+        <textarea rows="5" placeholder="Your Message" required></textarea>  
+        <button type="submit">Send Message</button>  
+      </form>  
+    </div>  
+  </section>  
+
+  <!-- Data Table -->  
+  <section id="table" class="section">  
+    <div class="container">  
+      <h2>Sample Data Table</h2>  
+      <table>  
+        <thead>  
+          <tr>  
+            <th>ID</th>  
+            <th>Name</th>  
+            <th>Status</th>  
+            <th>Date</th>  
+            <th>Actions</th>  
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <td>1</td>  
+            <td>John Doe</td>  
+            <td>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+                </section>
+                </main>
+                </body>
+                </html>
+                
