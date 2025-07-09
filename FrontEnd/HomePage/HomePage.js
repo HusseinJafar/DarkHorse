@@ -1,80 +1,25 @@
-const dateContainer = document.getElementById("date-container");
+const openBtn=document.getElementById("open");
 
-const date=new Date();
+const closeBtn=document.getElementById("close");
 
-let hours=date.getHours();
+const sideBar=document.getElementById("side-bar");
 
-let minutes=date.getMinutes();
+const hamburger=document.getElementById("hamburger");
 
-let dayOfTheWeek=date.getDay();
 
-let month=date.getMonth();
+function openSideBar(){
 
-let actualDate=date.getDate();
+  sideBar.classList.add("active");
+  hamburger.style.display="none";
 
-let fullYear=date.getFullYear();
-
-switch (month) {
-  case 0:
-    month = "January";
-    break;
-  case 1:
-    month = "February";
-    break;
-  case 2:
-    month = "March";
-    break;
-  case 3:
-    month = "April";
-    break;
-  case 4:
-    month = "May";
-    break;
-  case 5:
-    month = "June";
-    break;
-  case 6:
-    month = "July";
-    break;
-  case 7:
-    month = "August";
-    break;
-  case 8:
-    month = "September";
-    break;
-  case 9:
-    month = "October";
-    break;
-  case 10:
-    month = "November";
-    break;
-  case 11:
-    month = "December";
-    break;
 }
 
-switch (dayOfTheWeek) {
-  case 0:
-    dayOfTheWeek = "Sunday";
-    break;
-  case 1:
-    dayOfTheWeek = "Monday";
-    break;
-  case 2:
-    dayOfTheWeek = "Tuesday";
-    break;
-  case 3:
-    dayOfTheWeek = "Wednesday";
-    break;
-  case 4:
-    dayOfTheWeek = "Thursday";
-    break;
-  case 5:
-    dayOfTheWeek = "Friday";
-    break;
-  case 6:
-    dayOfTheWeek = "Saturday";
-    break;
+function closeSideBar(){
+
+  sideBar.classList.remove("active");
+  hamburger.style.display="block"
 }
 
-dateContainer.textContent=`Nairobi,Kenya | ${dayOfTheWeek},${month} ${actualDate} ${fullYear} | ${hours} : ${minutes} East African Time`
+openBtn.addEventListener("click",openSideBar);
+
+closeBtn.addEventListener("click",closeSideBar)
