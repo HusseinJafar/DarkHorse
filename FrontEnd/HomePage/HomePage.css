@@ -38,13 +38,13 @@
 }
 .right-navbar ul li{
     display: inline-block;
-    padding: 0px 14px;
+    padding: 0px 6px;
 }
 #side-bar{
     width: 350px;
     height: 100vh;
     z-index: 1000;
-    background-color:rgba(81, 79, 79, 0.5);
+    background:linear-gradient(180deg,rgba(111, 111, 108,0.3),rgb(8, 8, 8));
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -57,9 +57,13 @@
     opacity: 1;
     pointer-events: auto; 
 }
+ .left-container{
+    width: 95%;
+    height: 100vh;
+ }
 .side-container{
-    margin-top: 50px;
-    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 .close-button{
     margin: 20px;
@@ -69,10 +73,10 @@
 }
 .side-container ul li{
     display: block;
-    padding: 18px 0px;
+    padding: 12px 10px;
 }
 .side-container ul li a{
-    font-size: 14px;
+    font-size: 11px;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 20px;
@@ -85,14 +89,81 @@
     font-size: 1.5rem;
     cursor: pointer;
 }
+.news-letter{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+}
+.news-letter input{
+    padding: 8px;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.news-letter input::placeholder{
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.news-letter button{
+    position: absolute;
+   top: 38%;
+   right: 0;
+   padding: 8px;
+   width: 100px;
+   border: none;
+   background-color:transparent;
+   color: white;
+   text-transform: uppercase;
+   font-size: 10px;
+}
+.shipping-info{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shipping-info p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.shipping-info button{
+    outline: none;
+    border: none;
+    font-size: 13px;
+    background-color: rgba(27,29,30,0.5);
+    cursor: pointer;
+}
 .time-container{
     width: 350px;
     height: 30px;
     position: absolute;
     top: 10%;
     left: 33%;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     padding: 10px;
     color: black;
+}
+.footer-links ul{
+    list-style: none;
+}
+.footer-links ul li{
+    padding: 12px 10px;
+}
+.footer-links ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 20px;
+    color: white;
+    cursor: pointer;
 }

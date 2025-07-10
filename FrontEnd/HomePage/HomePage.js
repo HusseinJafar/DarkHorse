@@ -107,4 +107,4 @@ switch (dayOfTheWeek) {
     break;
 }
 
-time.textContent=`Nairobi, Kenya | ${dayOfTheWeek} ${months},${date}, ${fullYear} | ${hours} : ${minutes}   | East African Time`
+time.textContent=`Nairobi, Kenya | ${dayOfTheWeek} ${months},${date},${fullYear}|${hours}:${minutes}|EAT`
