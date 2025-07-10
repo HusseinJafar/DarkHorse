@@ -18,12 +18,14 @@ function openSideBar(){
 function closeSideBar(){
 
   sideBar.classList.remove("active");
-  hamburger.style.display="block"
+  hamburger.style.display="block";
 }
 
 openBtn.addEventListener("click",openSideBar);
 
 closeBtn.addEventListener("click",closeSideBar);
+
+sideBar.addEventListener("click",closeSideBar);
 
 //time displayed on the home screen functionality 
 

@@ -29,6 +29,10 @@
 .right-navbar{
     margin-right: 30px;
 }
+.logo{
+    position: fixed;
+    left: 42%;
+}
 .left-navbar ul, .logo ul,.right-navbar ul{
     list-style: none;
 }
@@ -47,7 +51,7 @@
     background:linear-gradient(180deg,rgba(111, 111, 108,0.3),rgb(8, 8, 8));
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     backdrop-filter: 10px;
     opacity: 0;
     pointer-events: none;
@@ -63,7 +67,7 @@
  }
 .side-container{
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .close-button{
     margin: 20px;
@@ -147,7 +151,7 @@
     height: 30px;
     position: absolute;
     top: 10%;
-    left: 33%;
+    left: 35%;
     font-size: 12px;
     text-align: center;
     padding: 10px;
@@ -162,8 +166,64 @@
 .footer-links ul li a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 9px;
     line-height: 20px;
     color: white;
     cursor: pointer;
 }
+
+@media(max-width:839px){
+
+    .right-navbar img{
+        height: 15px;
+        vertical-align: middle;
+    }
+    .right-navbar ul li{
+        padding: 0px 6px;
+    }
+}
+@media(max-width:616px){
+    .right-navbar ul li{
+        padding: 0px 6px;
+    }
+    .right-navbar img{
+        height: 13px;
+        vertical-align: middle;
+    }
+    .left-navbar img{
+        height: 15px;
+    }
+    .logo img{
+        height: 17px;
+    }
+    .time-container{
+
+        width: 300px;
+        font-size: 10px;
+        left: 28%;
+    }
+
+}
+@media(max-width:457px){
+
+    .right-navbar img{
+        display: none;
+    }
+    .logo img,.left-navbar img{
+
+        height: 14px;
+        vertical-align: middle;
+    }
+    .time-container{
+       width: 200px;
+       font-size: 8px;
+       left: 24%;
+    }
+    #side-bar{
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        padding-bottom: 10px;
+    }
+}
+
