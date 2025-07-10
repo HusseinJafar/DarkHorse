@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 0.1px solid black;
+}
+.left-navbar{
+    margin-left: 30px;
+}
+.right-navbar{
+    margin-right: 30px;
+}
+.logo{
+    position: fixed;
+    left: 42%;
+}
+.left-navbar ul, .logo ul,.right-navbar ul{
+    list-style: none;
+}
+.left-navbar img, .logo img,.right-navbar img{
+    height: 20px;
+    vertical-align: middle;
+}
+.right-navbar ul li{
+    display: inline-block;
+    padding: 0px 6px;
+}
+#side-bar{
+    width: 350px;
+    height: 100vh;
+    z-index: 1000;
+    background:linear-gradient(180deg,rgba(111, 111, 108,0.3),rgb(8, 8, 8));
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    backdrop-filter: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.45s ease-in-out;
+}
+#side-bar.active{
+    opacity: 1;
+    pointer-events: auto; 
+}
+ .left-container{
+    width: 95%;
+    height: 100vh;
+ }
+.side-container{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.close-button{
+    margin: 20px;
+}
+.side-container ul, .close-button ul{
+    list-style: none;
+}
+.side-container ul li{
+    display: block;
+    padding: 12px 10px;
+}
+.side-container ul li a{
+    font-size: 11px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: white;
+    cursor: pointer;
+}
+.close-button a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.create-account{
+    width: 600px;
+    height: 400px;
+    transform: translate(15%,-0%);
+    text-align: left;
+    margin: 100px auto;
+}
+.create-account p{
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 15px;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    display: block;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+.create-account input{
+    width: 70%;
+    height: 25px;
+    border: none;
+    border-bottom: 0.1px solid black;
+    outline: none;
+    background-color: white;
+    margin-bottom: 15px;
+    position: relative;
+}
+.create-account label{
+    position: absolute;
+    top:30%;
+    left: 1px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 0px 4px;
+    opacity: 0.6;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-out;
+}
+.wrapper input:focus + label,
+.wrapper input:not(:placeholder-shown) + label{
+    top:-15px;
+    font-size: 11px;
+    color: black;
+}
+.forgot-password{
+    width: 50%;
+    height: 15px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+.forgot-password ul{
+    list-style: none;
+}
+.forgot-password ul li a{
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
+.button-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.button-container button{
+    display: block;
+    margin-bottom: 35px;
+    width: 60%;
+    height: 45px;
+    border: 0.1px solid black;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.button-container button a{
+    text-decoration: none;
+}
+.button-container #signin a{
+    color: white;
+}
+.button-container #create a{
+    color: black;
+}
+#signin{
+    background-color: black;
+    color: white;
+}
+#create{
+    background-color: transparent;
+    transition: all 0.4s ease-out;
+}
+#create:hover{
+    background-color: black;
+    color: white;
+}
+@media(max-width:680px){
+
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-navbar ul li{
+        padding: 0px 5px;
+    }
+    .right-navbar img{
+        height: 13px;
+        vertical-align: middle;
+    }
+}
+@media(max-width:400px){
+    .right-navbar ul li{
+        padding: 0px 5px;
+    }
+    .right-navbar img{
+        height: 13px;
+        vertical-align: middle;
+    }
+    .logo img{
+        height: 15px;
+        vertical-align: middle;
+    }
+    .left-navbar img{
+        height: 15px;
+        vertical-align: middle;
+    }
+}
+@media(max-width:350px){
+    .side-bar{
+        width: 100%;
+        height: 100vh;
+    }
+}
